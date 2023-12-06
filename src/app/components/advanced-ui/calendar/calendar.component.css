@@ -1,0 +1,222 @@
+#external-events {
+  height: 10%;
+  margin-top: 3.5rem;
+  padding: 0 20px;
+  border: 1px solid #ece9fb;
+  background: #f7f6fd;
+  text-align: left;
+  border-radius: 5px;
+}
+
+#external-events h4 {
+  font-size: 16px;
+  margin-top: 0;
+  padding-top: 1em;
+}
+
+#external-events ul {
+  list-style: none;
+  padding: 0;
+}
+
+#external-events ul li {
+  margin: 11px 0;
+}
+
+#external-events ul li a {
+  color: #fff;
+  padding: 1px 6px;
+  display: block;
+  border: 1px solid #6259ca;
+  border-radius: 3px;
+  background-color: #6259ca;
+  font-size: 0.85em;
+}
+
+::ng-deep .cal-month-view .cal-day-number {
+  font-size: 1.1em;
+  margin-top: 5px;
+  margin-right: 5px;
+  color: #1d212f;
+}
+
+::ng-deep .cal-month-view .cal-day-cell:not(:last-child) {
+  border-right-color: #ebf1ff;
+}
+
+::ng-deep .main-content-body-calendar .btn {
+  border-radius: 4px;
+  color: #705ec8;
+}
+
+::ng-deep .cal-month-view .cal-days .cal-cell-row {
+  border-bottom-color: #ebf1ff;
+}
+
+::ng-deep .cal-month-view .cal-open-day-events {
+  color: #242222;
+  background-color: #f7f6fd;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #ebf1ff;
+  border-top: 0;
+}
+
+::ng-deep .cal-month-view .cal-event-title:hover {
+  text-decoration: none;
+}
+
+::ng-deep .cal-event-action:focus {
+  outline: 0;
+}
+
+::ng-deep mwl-calendar-event-title:focus {
+  outline: 0;
+}
+
+::ng-deep .cal-month-view .cal-days {
+  border-color: #ebf1ff;
+}
+
+::ng-deep .cal-month-view .cal-cell-row:hover {
+  background-color: #f7f6fd;
+}
+
+::ng-deep .cal-month-view .cal-day-cell.cal-today {
+  background-color: #eef1f9;
+}
+
+::ng-deep .cal-month-view .cal-cell.cal-has-events.cal-open {
+  background-color: #f7f6fd;
+}
+
+::ng-deep .cal-month-view .cal-cell-row .cal-cell:hover {
+  background-color: #f7f6fd;
+}
+
+::ng-deep .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
+  color: #728096;
+}
+
+::ng-deep .cal-month-view .cal-day-badge {
+  background-color: #705ec8;
+}
+
+::ng-deep .cal-month-view .cal-cell:focus {
+  outline: 0;
+}
+
+::ng-deep .table.table-bordered {
+  border-top: 1px solid #ebf1ff;
+}
+
+::ng-deep .cal-header {
+  border-top: 1px solid #ebf1ff;
+  border-left: 1px solid #ebf1ff;
+  border-right: 1px solid #ebf1ff;
+}
+
+::ng-deep .cal-month-view .cal-header .cal-cell {
+  padding: 10px 0;
+}
+
+::ng-deep .cal-cell {
+  border-right: 1px solid #ebf1ff;
+}
+
+::ng-deep .cal-cell:last-child {
+  border-right: 0;
+}
+
+::ng-deep .cal-month-view .cal-cell.cal-has-events.cal-open {
+  background: #eef1f9;
+}
+
+::ng-deep .cal-month-view .cal-day-cell.cal-today .cal-day-number {
+  color: #1a1630;
+}
+
+::ng-deep .flatpickr-calendar {
+  border: 1px solid #ebf1ff;
+  -webkit-box-shadow: 0px 6px 8px rgba(4, 4, 7, 0.1);
+          box-shadow: 0px 6px 8px rgba(4, 4, 7, 0.1);
+}
+
+::ng-deep .flatpickr-day.today,
+::ng-deep .flatpickr-day.today:hover,
+::ng-deep .flatpickr-day.today:focus {
+  border-color: #705ec8;
+  background: #705ec8;
+  color: #fff;
+}
+
+::ng-deep .flatpickr-day.selected,
+::ng-deep .flatpickr-day.startRange,
+::ng-deep .flatpickr-day.endRange,
+::ng-deep .flatpickr-day.selected.inRange,
+::ng-deep .flatpickr-day.startRange.inRange,
+::ng-deep .flatpickr-day.endRange.inRange,
+::ng-deep .flatpickr-day.selected:focus,
+::ng-deep .flatpickr-day.startRange:focus,
+::ng-deep .flatpickr-day.endRange:focus,
+::ng-deep .flatpickr-day.selected:hover,
+::ng-deep .flatpickr-day.startRange:hover,
+::ng-deep .flatpickr-day.endRange:hover,
+::ng-deep .flatpickr-day.selected.prevMonthDay,
+::ng-deep .flatpickr-day.startRange.prevMonthDay,
+::ng-deep .flatpickr-day.endRange.prevMonthDay,
+::ng-deep .flatpickr-day.selected.nextMonthDay,
+::ng-deep .flatpickr-day.startRange.nextMonthDay,
+::ng-deep .flatpickr-day.endRange.nextMonthDay {
+  border-color: #705ec8;
+  background: #705ec8;
+  color: #fff;
+}
+
+::ng-deep .flatpickr-day.inRange,
+::ng-deep .flatpickr-day.prevMonthDay.inRange,
+::ng-deep .flatpickr-day.nextMonthDay.inRange,
+::ng-deep .flatpickr-day.today.inRange,
+::ng-deep .flatpickr-day.prevMonthDay.today.inRange,
+::ng-deep .flatpickr-day.nextMonthDay.today.inRange,
+::ng-deep .flatpickr-day:hover,
+::ng-deep .flatpickr-day.prevMonthDay:hover,
+::ng-deep .flatpickr-day.nextMonthDay:hover,
+::ng-deep .flatpickr-day:focus,
+::ng-deep .flatpickr-day.prevMonthDay:focus,
+::ng-deep .flatpickr-day.nextMonthDay:focus {
+  border-color: #705ec8;
+  background: #705ec8;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  ::ng-deep #external-events-1 .btn-group {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  ::ng-deep #external-events-1 .btn-group .btn {
+    padding: .2rem;
+    line-height: 2.5;
+  }
+}
+
+@media (max-width: 669px) {
+  ::ng-deep #external-events-1 .text-left, ::ng-deep #external-events-1 .text-right {
+    text-align: center !important;
+  }
+  ::ng-deep .cal-month-view .cal-cell-top {
+    min-height: 10px;
+  }
+  ::ng-deep .cal-month-view .cal-day-cell {
+    min-height: 10px;
+    min-height: 10px;
+  }
+  ::ng-deep .cal-month-view .cal-day-badge {
+    display: none;
+  }
+  ::ng-deep .cal-month-view .cal-day-cell.cal-today .cal-day-number {
+    font-size: 1.2em;
+  }
+}
+/*# sourceMappingURL=calendar.component.css.map */

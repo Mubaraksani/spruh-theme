@@ -1,0 +1,36 @@
+<div class="horizontalMenucontainer">
+
+    <!-- customizer -->
+    <app-customizer></app-customizer>
+    <!-- /customizer -->
+    <div class="page">
+        <!-- Header -->
+        <app-header></app-header>
+        <!-- /Header -->
+
+        <!-- Sidemenu -->
+        <app-sidemenu appHoverEffectSidebar></app-sidemenu>
+        <!-- /Sidemenu -->
+
+
+        <!-- Main Content -->
+        <div class="main-content side-content" >
+            <div class="main-container container-fluid">
+                <div class="inner-body"  [ngClass]="{ 'pt-40': scrolled }" (click)="clickonBody()">
+                    <router-outlet>
+                        <app-loader></app-loader>
+                    </router-outlet>
+                </div>
+            </div>
+        </div>
+        <!-- /Main Content -->
+
+        <!-- Footer -->
+        <app-footer></app-footer>
+        <!-- /Footer -->
+
+        <!-- Notification-sidebar -->
+        <app-notification-sidebar></app-notification-sidebar>
+        <!-- /Notification-sidebar -->
+    </div>
+</div>

@@ -1,0 +1,27 @@
+@media (max-width: 515px) {
+  ::ng-deep aw-wizard-navigation-bar.horizontal ul.steps-indicator li a .label {
+    display: none;
+  }
+  ::ng-deep aw-wizard-navigation-bar.horizontal ul.steps-indicator li.current a .label {
+    display: block;
+  }
+}
+
+@media (max-width: 442px) {
+  ::ng-deep aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li .step-indicator {
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+  }
+  ::ng-deep aw-wizard-navigation-bar.horizontal ul.steps-indicator li.current a .label {
+    padding-top: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 340px) {
+  ::ng-deep #checkoutsteps .item .purchase {
+    margin-left: 3px;
+  }
+}
+/*# sourceMappingURL=checkout.component.css.map */

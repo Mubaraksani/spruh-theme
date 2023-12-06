@@ -1,0 +1,86 @@
+<div class="page main-signin-wrapper" style="background-image: url(assets/img/login_bg.jpg)">
+   <!-- Row -->
+   <div class=" row signpages text-center">
+      <div class="col-md-12">
+         <div class="row row-sm">
+            <div class="col-lg-6 col-xl-5 d-none d-lg-block text-center bg-primary details">
+               <div class="mt-5 pt-4 p-2 pos-absolute">
+                  <img src="./assets/img/brand/logo-light.png" class="header-brand-img mb-4" alt="logo">
+                  <div class="clearfix"></div>
+                  <img src="./assets/img/svgs/user.svg" class="ht-100 mb-0" alt="user">
+                  <h5 class="mt-4 text-white">Create Your Account</h5>
+                  <span class="tx-white-6 tx-13 mb-5 mt-xl-0">Signup to create, discover and connect with the
+                     global community</span>
+               </div>
+            </div>
+            <div class="col-lg-6 col-xl-7 col-xs-12 col-sm-12 login_form ">
+               <div class="container-fluid">
+                  <div class="row row-sm">
+                     <div class="card-body">
+                        <img src="./assets/img/brand/logo.png" class="header-brand-img text-center mb-3"
+                           style="width: 80%;" alt="logo">
+                        <div class="clearfix"></div>
+                        <h4 class="text-center mb-3" translate>Login To Continue</h4>
+                        <!-- <div class="row">
+                           <div class="col-md-6">
+                              <button class="btn mt-2 mb-4 facebook-btn btn-block" translate><i
+                                    class="fab fa-facebook-f" style="cursor: pointer;"
+                                    aria-hidden="true">&nbsp;&nbsp;<label
+                                       style="margin-bottom: 0px !important; font-size: 16px; cursor: pointer; font-weight: bold;">Facebook</label></i></button>
+                           </div>
+                           <div class="col-md-6">
+                              <button class="btn mt-2 mb-4 google-btn btn-block" translate><i class="fab fa-google"
+                                    style="cursor: pointer;" aria-hidden="true">&nbsp;&nbsp;<label
+                                       style="margin-bottom: 0px !important; font-size: 16px; cursor: pointer; font-weight: bold;">Google</label></i></button>
+                           </div>
+                        </div> -->
+                        <form [formGroup]="loginForm" (ngSubmit)="Submit()" novalidate>
+                           <div class="form-group text-start">
+                              <label translate>Email</label>
+                              <input class="form-control" placeholder="{{'Enter email' | translate}}"
+                                 formControlName="email" type="text"
+                                 [ngClass]="{'has-success': loginFormControl['email'].valid}">
+                              <div
+                                 *ngIf="(loginFormControl['email']?.touched || loginFormControl['email'].dirty) && (loginFormControl['email'].errors?.['required'])"
+                                 class="tx-danger">
+                                 <small translate>Please provide email</small>
+                              </div>
+                              <div
+                                 *ngIf="(loginFormControl['email']?.touched || loginFormControl['email'].dirty) && (loginFormControl['email'].errors?.['email'])"
+                                 class="tx-danger">
+                                 <small translate>Please enter a valid email</small>
+                              </div>
+                           </div>
+                           <div class="form-group text-start">
+                              <label translate>Password</label>
+                              <div class="input-group">
+                                 <input [type]="isPasswordText ? 'text' : 'password'" class="form-control"
+                                    formControlName="password" placeholder="{{'Enter password' | translate}}"
+                                    [ngClass]="{'has-success': loginFormControl['password'].valid}" />
+                                 <div class="input-group-text">
+                                    <a class="link-icon" (click)="togglePassword()" style="cursor: pointer;"><i
+                                          class="fe" [ngClass]="!isPasswordText ? 'fe-eye' : 'fe-eye-off'"></i></a>
+                                 </div>
+                              </div>
+                              <div
+                                 *ngIf="(loginFormControl['password'].touched || loginFormControl['password'].dirty) && (loginFormControl['password'].errors?.['required'])"
+                                 class="tx-danger">
+                                 <small translate>Please provide Password</small>
+                              </div>
+                           </div>
+                           <button class="btn mt-4 btn-main-primary btn-block" translate><b>Login</b></button>
+                        </form>
+                        <div class="text-center mt-3 ms-0">
+                           <div class="mb-1"><a routerLink="/auth/forgot-password"
+                                 style="color: #ff0072 !important;">{{"Forgot Password" | translate}}?</a></div>
+                        </div>
+                        <button class="btn mt-3 btn-secondary btn-block" (click)="registration()" translate><b>Create An
+                              Account</b></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

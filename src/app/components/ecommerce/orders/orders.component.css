@@ -1,0 +1,21 @@
+::ng-deep .filter-group .ng-select {
+  width: 120px !important;
+  height: 38px;
+}
+
+@media (max-width: 340px) {
+  .d-flex.mt-4.mt-lg-0 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .d-flex.mt-4.mt-lg-0 .filter-group {
+    margin-bottom: 10px;
+  }
+  .d-flex.mt-4.mt-lg-0 .filter-group:nth-child(2) {
+    margin-left: 0rem !important;
+  }
+  .table-filter input {
+    width: 150px !important;
+  }
+}
+/*# sourceMappingURL=orders.component.css.map */

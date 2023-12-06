@@ -1,0 +1,48 @@
+::ng-deep {
+    .feature-logos {
+        .owl-carousel .owl-item img {
+            height: 70px;
+            width: 70px;
+            padding: 14px;
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0px 4px 16px rgb(0 0 0 / 10%);
+            margin: 0 auto;
+            border: none;
+        }
+
+        .owl-theme:before,
+        .owl-theme:after {
+            display: none;
+        }
+    }
+
+    .testimonial-carousel {
+
+        .owl-theme:before,
+        .owl-theme:after {
+            display: none;
+        }
+    }
+
+    .dark-theme {
+        &.landing-page .landing-top-header {
+            @media (max-width: 991.98px) {
+                .app-sidebar {
+                    background: #0e0e23 !important;
+                    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.2);
+                }
+
+                .side-menu__item {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-right: -1px;
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}

@@ -1,0 +1,12 @@
+::ng-deep .carousel-indicators {
+  bottom: 80px !important;
+}
+
+::ng-deep .carousel {
+  outline: none;
+}
+
+.product-details.nav .nav-link {
+  padding: 10px 0px;
+}
+/*# sourceMappingURL=products-details.component.css.map */

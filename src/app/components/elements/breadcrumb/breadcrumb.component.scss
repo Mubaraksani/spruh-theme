@@ -1,0 +1,14 @@
+::ng-deep {
+  app-breadcrumb{
+    .breadcrumb {
+      background-color: #f0f0ff !important;
+    }
+  }
+  .dark-theme{
+    app-breadcrumb{
+      .breadcrumb {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+      }
+    }
+  }
+}

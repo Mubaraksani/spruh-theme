@@ -1,0 +1,14 @@
+::ng-deep{
+    .carousel-indicators{
+        bottom: 80px !important;
+    }
+    .carousel{ 
+        outline: none;
+    }
+    .rtl .form-control {
+        padding: 0rem 0.75rem 0rem 0.25rem;
+    }
+}
+.product-details.nav .nav-link{
+    padding: 10px 0px;
+}

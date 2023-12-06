@@ -1,0 +1,11 @@
+.notification:before{
+   display: none;
+}
+.notification .notification-body{
+   margin-left: 0px;
+   margin-right: 0px;
+   border: 1px solid #e8e8f7;
+}
+.notification .notification-body:before{
+   display: none;
+}

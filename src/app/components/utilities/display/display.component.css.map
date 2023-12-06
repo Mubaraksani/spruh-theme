@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "display.component.scss"
+    ],
+    "names": [],
+    "file": "display.component.css"
+}

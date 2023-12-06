@@ -1,0 +1,17 @@
+@media (min-width: 992px) {
+  .card-options .dropdown-menu {
+    -webkit-transform: translate(0px, 34px) !important;
+            transform: translate(0px, 34px) !important;
+  }
+}
+
+.card-options .dropdown-menu {
+  left: -120px !important;
+}
+
+.card-options .dropdown-menu[x-placement^=top],
+.card-options .dropdown-menu[x-placement^=bottom] {
+  -webkit-transform: translate(0px, 34px) !important;
+          transform: translate(0px, 34px) !important;
+}
+/*# sourceMappingURL=ecommerce-dashboard.component.css.map */

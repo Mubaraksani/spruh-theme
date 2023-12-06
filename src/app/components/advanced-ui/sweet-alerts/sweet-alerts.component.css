@@ -1,0 +1,23 @@
+::ng-deep .swal2-timer-progress-bar {
+  background: #6259ca !important;
+}
+
+::ng-deep .swal2-styled {
+  font-size: 0.875rem !important;
+}
+
+::ng-deep .swal2-styled:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+::ng-deep .swal2-title {
+  color: #334151;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+::ng-deep .swal2-content {
+  font-size: 16px;
+}
+/*# sourceMappingURL=sweet-alerts.component.css.map */

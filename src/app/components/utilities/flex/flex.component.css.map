@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "flex.component.scss"
+    ],
+    "names": [],
+    "file": "flex.component.css"
+}

@@ -1,0 +1,11 @@
+::ng-deep{
+    .rtl{
+        .alert-dismissible .close{
+            right: initial !important;
+            left: 0;
+        }
+        .close{
+            float: left;
+        }
+    }
+}

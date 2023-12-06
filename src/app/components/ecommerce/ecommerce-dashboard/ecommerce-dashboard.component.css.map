@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACI,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,aAAa,CAAC,cAAc,CAAA;IACxB,SAAS,EAAE,oBAAoB,CAAC,UAAU;GAC7C;;;AAEL,AAAA,aAAa,CAAC,cAAc,CAAA;EACxB,IAAI,EAAE,iBAAiB;CAC1B;;AAED,AAAA,aAAa,CAAC,cAAc,CAAA,AAAA,WAAC,EAAD,GAAC,AAAA;AAC7B,aAAa,CAAC,cAAc,CAAA,AAAA,WAAC,EAAD,MAAC,AAAA,EAC7B;EACI,SAAS,EAAE,oBAAoB,CAAC,UAAU;CAC7C",
+    "sources": [
+        "ecommerce-dashboard.component.scss"
+    ],
+    "names": [],
+    "file": "ecommerce-dashboard.component.css"
+}

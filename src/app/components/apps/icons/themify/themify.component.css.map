@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "themify.component.scss"
+    ],
+    "names": [],
+    "file": "themify.component.css"
+}

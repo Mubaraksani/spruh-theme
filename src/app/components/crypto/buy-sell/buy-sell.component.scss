@@ -1,0 +1,66 @@
+::ng-deep {
+    .input-group-append .ng-select .ng-select-container {
+        height: 44px;
+    }
+
+    .icons_select2.ng-select {
+        height: 46px;
+    }
+
+    @media (max-width:400px) {
+        .input-group .wd-30p {
+            width: 40%;
+        }
+    }
+
+    form input:checked+label:before,
+    .form input:checked+label:before {
+        z-index: 1;
+    }
+
+    .apexcharts-tooltip {
+        z-index: 1;
+    }
+
+    .dark-theme {
+        .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup {
+            color: #fff;
+        }
+    }
+
+    .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+        top: auto;
+    }
+
+    .bg-primary-transparent {
+        background-color: #000;
+    }
+
+    .cryptoicon {
+        line-height: 23px !important;
+    }
+
+    ng-select.form-control.icons_select2 {
+        padding: 0rem 0 0.175rem !important;
+    }
+
+    [dir="rtl"] .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    @media screen and (max-width:576px) {
+        .ng-select .ng-clear-wrapper {
+            display: none;
+        }
+
+        [dir="rtl"] .ng-select .ng-select-container .ng-value-container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    .rtl .cryptoicon {
+        margin-top: 0;
+    }
+}

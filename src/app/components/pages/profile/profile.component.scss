@@ -1,0 +1,66 @@
+::ng-deep {
+
+    .option-dots:hover {
+        background: none;
+    }
+
+
+    .btn.btn-rounded.btn-danger {
+        margin-right: 5px;
+    }
+
+    .ng-select,
+    .ng-select div,
+    .ng-select input,
+    .ng-select span {
+        box-sizing: content-box !important;
+    }
+
+    .dark-theme {
+
+        .navbar-toggler .header-icons:hover,
+        .option-dots:hover {
+            background-color: transparent;
+        }
+    }
+
+    .user-lock .dropdown-menu {
+        // transform: translate(0px, 21px) !important;
+        z-index: 9 !important;
+        right: 0%;
+        left: initial !important;
+    }
+
+    .rtl {
+        app-profile {
+            .user-lock .dropdown-menu {
+                left: 0px !important;
+                right: initial !important;
+            }
+
+            .dropdown-item .fe {
+                float: right;
+            }
+        }
+    }
+
+    .plain-container .image {
+        width: 49% !important;
+        border-radius: 4px;
+    }
+
+    .rtl {
+        .btn.btn-rounded.btn-danger {
+            margin-left: 5px;
+            margin-right: auto;
+        }
+    }
+}
+
+
+
+
+.media .shadow.dropdown-menu[x-placement^=bottom] {
+    transform: translate(-150px, 24px) !important;
+    z-index: 9 !important;
+}

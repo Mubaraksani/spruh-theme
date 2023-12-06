@@ -1,0 +1,23 @@
+.toast {
+    max-width: 100%;
+    width: 400px;
+}
+
+::ng-deep {
+    .rtl {
+        ngb-toast .toast-header .close {
+            margin-right: auto;
+            margin-left: initial !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .toast-header small {
+            margin-left: auto;
+        }
+
+        .rtl .toast-header .btn-close {
+            left: -10px;
+        }
+    }
+}

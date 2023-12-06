@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,SADK,CACL,yBAAyB,CAAC;EACtB,UAAU,EAAE,kBAAkB;CACjC;;AAHL,AAII,SAJK,CAIL,aAAa,CAAA;EACT,SAAS,EAAE,mBAAmB;CACjC;;AANL,AAOI,SAPK,CAOL,aAAa,AAAA,MAAM,CAAA;EACf,UAAU,EAAE,IAAI;CACnB;;AATL,AAUI,SAVK,CAUL,YAAY,CAAA;EACR,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;CAClB;;AAdL,AAeI,SAfK,CAeL,cAAc,CAAA;EACV,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "sweet-alerts.component.scss"
+    ],
+    "names": [],
+    "file": "sweet-alerts.component.css"
+}

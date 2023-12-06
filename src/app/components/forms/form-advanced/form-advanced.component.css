@@ -1,0 +1,124 @@
+::ng-deep .iti--allow-dropdown input {
+  border: 0;
+  outline: none;
+}
+
+::ng-deep .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  background-color: #e0e2f7;
+  color: #1d212f;
+  padding: 1px;
+  font-size: 0.875rem;
+}
+
+::ng-deep .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon.left {
+  border: 0 !important;
+}
+
+::ng-deep .ng-select.ng-select-disabled > .ng-select-container {
+  background-color: #f2f1ff;
+}
+
+::ng-deep .ng-select.ng-select-disabled .ng-select-container .ng-value-container,
+::ng-deep .ng-select.ng-select-disabled .ng-select-container .ng-value-container .ng-input {
+  cursor: not-allowed !important;
+}
+
+::ng-deep .selected-list .c-btn:focus {
+  outline: 0;
+}
+
+::ng-deep .selected-list .c-angle-down,
+::ng-deep .selected-list .c-angle-up {
+  width: 8px !important;
+  height: 8px !important;
+  top: 40% !important;
+  color: #a8afc7;
+}
+
+::ng-deep .selected-item,
+::ng-deep .dropdown-list ul li:hover {
+  background: #f1f2f9;
+}
+
+::ng-deep .c-btn {
+  background: #fff;
+  border: 1px solid #e0e2f7;
+  color: #a8afc7;
+}
+
+::ng-deep .c-btn.disabled {
+  background: #f2f1ff !important;
+  cursor: not-allowed !important;
+}
+
+::ng-deep .pure-checkbox input[type="checkbox"] + label:before {
+  color: #6259ca;
+  border: 1px solid #6259ca;
+}
+
+::ng-deep .pure-checkbox input[type="checkbox"]:focus + label:before,
+::ng-deep .pure-checkbox input[type="checkbox"]:hover + label:before {
+  border: #6259ca;
+}
+
+::ng-deep .single-select-mode .pure-checkbox input[type="checkbox"] + label:after {
+  border-color: #6259ca !important;
+}
+
+::ng-deep .selected-list .c-list .c-token {
+  background: #e0e2f7;
+  border-radius: 4px !important;
+}
+
+::ng-deep .selected-list .c-list .c-token .c-label,
+::ng-deep .selected-list .c-list .c-token .c-remove svg {
+  color: #1d212f !important;
+  fill: #1d212f !important;
+}
+
+::ng-deep .arrow-down.arrow-2,
+::ng-deep .arrow-2.arrow-up,
+::ng-deep .arrow-2,
+::ng-deep .arrow-down,
+::ng-deep .arrow-up {
+  display: none;
+  border: 0;
+}
+
+::ng-deep .dropzone {
+  border: 1px solid #e0e2f7;
+  border-radius: 4px;
+}
+
+::ng-deep .dz-message.needsclick {
+  color: #a8afc7;
+}
+
+::ng-deep .dz-message h6 {
+  font-weight: 400;
+}
+
+::ng-deep .dz-message i {
+  font-size: 1.5rem;
+}
+
+::ng-deep .dropzone.dropzone-primary.disable {
+  cursor: not-allowed;
+}
+
+::ng-deep .md-drppicker .btn {
+  margin-left: 4px;
+}
+
+::ng-deep .dropdown-list {
+  z-index: 2 !important;
+}
+
+::ng-deep .md-drppicker {
+  z-index: 1;
+}
+
+::ng-deep .custom.ng-pristine.ng-valid.ng-touched {
+  padding-top: 0;
+}
+/*# sourceMappingURL=form-advanced.component.css.map */

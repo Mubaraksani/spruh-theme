@@ -1,0 +1,27 @@
+::ng-deep .forth.circle svg {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+::ng-deep .btn-primary:hover {
+  color: #fff !important;
+  background-color: #403fad !important;
+  border-color: #403fad !important;
+}
+
+::ng-deep .dropdown-menu-right.dropdown-menu {
+  -webkit-transform: translate(-101px, 40px) !important;
+          transform: translate(-101px, 40px) !important;
+}
+
+::ng-deep .dropdown-menu {
+  z-index: 9 !important;
+}
+
+.ml-auto.show.dropdown .dropdown-menu {
+  -webkit-transform: translate(-120px, 40px) !important;
+          transform: translate(-120px, 40px) !important;
+}
+/*# sourceMappingURL=dashboard.component.css.map */

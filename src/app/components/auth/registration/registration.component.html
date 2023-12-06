@@ -1,0 +1,128 @@
+<div class="page main-signin-wrapper" style="background-image: url(assets/img/login_bg.jpg)">
+   <div class=" row signpages text-center">
+      <div class="col-md-12" >
+         <div class="row row-sm">
+            <div class="col-lg-6 col-xl-5 d-none d-lg-block text-center bg-primary details">
+               <div class="mt-5 pt-5 p-2 pos-absolute">
+                  <img src="./assets/img/brand/logo-light.png" class="header-brand-img mb-4" alt="logo">
+                  <div class="clearfix"></div>
+                  <img src="./assets/img/svgs/user.svg" class="ht-100 mb-0" alt="user">
+                  <h5 class="mt-4 text-white">Create Your Account</h5>
+                  <span class="tx-white-6 tx-13 mb-5 mt-xl-0">Signup to create, discover and connect with the
+                     global community</span>
+               </div>
+            </div>
+            <div class="col-lg-6 col-xl-7 col-xs-12 col-sm-12 registration_form">
+               <div class="container-fluid">
+                  <div class="row row-sm">
+                     <div class="card-body">
+                        <img src="./assets/img/brand/logo.png" class="header-brand-img text-center mb-3"
+                           style="width: 80%;" alt="logo">
+                        <div class="clearfix"></div>
+                        <h4 class="text-center mb-3" translate>Registration</h4>
+                        <!-- <div class="row">
+                           <div class="col-md-6">
+                              <button class="btn mt-2 mb-4 facebook-btn btn-block" translate><i
+                                    class="fab fa-facebook-f" style="cursor: pointer;"
+                                    aria-hidden="true">&nbsp;&nbsp;<label
+                                       style="margin-bottom: 0px !important; font-size: 16px; cursor: pointer; font-weight: bold;">Facebook</label></i></button>
+                           </div>
+                           <div class="col-md-6">
+                              <button class="btn mt-2 mb-4 google-btn btn-block" translate><i class="fab fa-google"
+                                    style="cursor: pointer;" aria-hidden="true">&nbsp;&nbsp;<label
+                                       style="margin-bottom: 0px !important; font-size: 16px; cursor: pointer; font-weight: bold;">Google</label></i></button>
+                           </div>
+                        </div> -->
+                        <form [formGroup]="registrationForm" (ngSubmit)="Submit()" novalidate>
+                           <div class="form-group text-start">
+                              <label translate>Full Name</label>
+                              <input class="form-control" placeholder="{{'Enter full name' | translate}}"
+                                 formControlName="full_name" type="text"
+                                 [ngClass]="{'has-success': registrationFormControl['full_name'].valid}">
+                              <div
+                                 *ngIf="(registrationFormControl['full_name']?.touched || registrationFormControl['full_name'].dirty) && (registrationFormControl['full_name'].errors?.['required'])"
+                                 class="tx-danger">
+                                 <small translate>Please provide full name</small>
+                              </div>
+                              <div
+                                 *ngIf="(registrationFormControl['full_name']?.touched || registrationFormControl['full_name'].dirty) && (registrationFormControl['full_name'].errors?.['full_name'])"
+                                 class="tx-danger">
+                                 <small translate>Accept character only</small>
+                              </div>
+                           </div>
+                           <div class="form-group text-start">
+                              <label translate>Email</label>
+                              <input class="form-control" placeholder="{{'Enter email' | translate}}"
+                                 formControlName="email" type="email"
+                                 [ngClass]="{'has-success': registrationFormControl['email'].valid}">
+                              <div
+                                 *ngIf="(registrationFormControl['email']?.touched || registrationFormControl['email'].dirty) && (registrationFormControl['email'].errors?.['required'])"
+                                 class="tx-danger">
+                                 <small translate>Please provide email</small>
+                              </div>
+                              <div
+                                 *ngIf="(registrationFormControl['email']?.touched || registrationFormControl['email'].dirty) && (registrationFormControl['email'].errors?.['email'])"
+                                 class="tx-danger">
+                                 <small translate>Please enter a valid email</small>
+                              </div>
+                           </div>
+                           <div class="form-group text-start">
+                              <label>{{"Mobile Number" | translate}}</label>
+                              <div class="input-group">
+                                 <input class="form-control" maxlength="16" type="tel"
+                                    placeholder="{{'Enter mobile number' | translate}}" (keypress)="keyPress($event)"
+                                    formControlName="mobile"
+                                    [ngClass]="{'has-success': registrationFormControl['mobile'].valid}">
+                              </div>
+                              <ng-container class="invalid"
+                                 *ngIf="registrationFormControl['mobile'].hasError('required') && (registrationFormControl['mobile'].touched || registrationFormControl['mobile'].dirty)">
+                                 <small class="tx-danger" translate>Please Provide Mobile Number</small>
+                              </ng-container>
+                              <div class="invalid"
+                                 *ngIf="registrationFormControl['mobile'].hasError('pattern') && (registrationFormControl['mobile'].touched || registrationFormControl['mobile'].dirty)">
+                                 <small class="tx-danger" translate>Please Provide A Valid Mobile
+                                    Number</small>
+                              </div>
+                           </div>
+                           <div class="form-group text-start">
+                              <label translate>Password</label>
+                              <div class="input-group">
+                                 <input [type]="isPasswordText ? 'text' : 'password'" class="form-control"
+                                    formControlName="password" placeholder="{{'Enter password' | translate}}"
+                                    [ngClass]="{'has-success': registrationFormControl['password'].valid}" />
+                                 <div class="input-group-text">
+                                    <a class="link-icon" (click)="togglePassword()" style="cursor: pointer;"><i
+                                          class="fe" [ngClass]="!isPasswordText ? 'fe-eye' : 'fe-eye-off'"></i></a>
+                                 </div>
+                              </div>
+                              <div
+                                 *ngIf="(registrationFormControl['password'].touched || registrationFormControl['password'].dirty) && (registrationFormControl['password'].errors?.['required'])"
+                                 class="tx-danger">
+                                 <small translate>Please provide Password</small>
+                              </div>
+                           </div>
+                           <!-- <div class="form-group text-start">
+                              <label translate>Location</label>
+                              <input class="form-control" placeholder="{{'Enter location' | translate}}"
+                                 formControlName="location" type="text"
+                                 [ngClass]="{'has-success': registrationFormControl['location'].valid}">
+                              <div
+                                 *ngIf="(registrationFormControl['location']?.touched || registrationFormControl['location'].dirty) && (registrationFormControl['location'].errors?.['required'])"
+                                 class="tx-danger">
+                                 <small translate>Please provide location</small>
+                              </div>
+                           </div> -->
+                           <button class="btn mt-4 btn-main-primary btn-block" translate><b>Registration</b></button>
+                        </form>
+                        <div class="card-footer border-top-0 mt-3 text-center">
+                           <p class="mb-0">Back to <a routerLink="/auth/signin"
+                                 style="color: #ff0072 !important;">Login</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

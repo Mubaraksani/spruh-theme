@@ -1,0 +1,46 @@
+<app-page-header [title]="'Leaflet'" [items]="['Apps', 'Maps']" [active_item]="'Leaflet'"></app-page-header> 
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card" id="map1">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Map</h6>
+                    <p class="text-muted card-sub-title">Ease the build of pretty data visualizations on dynamic maps.</p>
+                </div>
+                <div class="ht-500" id="leaflet1" leaflet [leafletOptions]="options1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-6">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Leaflet Map With Popup</h6>
+                    <p class="text-muted card-sub-title">Ease the build of pretty data visualizations on dynamic maps.</p>
+                </div>
+                <div class="ht-500" id="leaflet2" leaflet [leafletOptions]="options2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Leaflet Map With Circle</h6>
+                    <p class="text-muted card-sub-title">Ease the build of pretty data visualizations on dynamic maps.</p>
+                </div>
+                <div class="ht-500" id="leaflet3" leaflet [leafletOptions]="options3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+

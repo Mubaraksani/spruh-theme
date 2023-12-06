@@ -1,0 +1,16 @@
+.has-success{
+    border: 1px solid #19b159;
+}
+
+.main-signin-wrapper {
+    // background: url(assets/img/login_bg.png) 
+    // no-repeat center center fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.page {
+    min-height: 100vh !important;
+}

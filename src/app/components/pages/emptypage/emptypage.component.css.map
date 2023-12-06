@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "emptypage.component.scss"
+    ],
+    "names": [],
+    "file": "emptypage.component.css"
+}

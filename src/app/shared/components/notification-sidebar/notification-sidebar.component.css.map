@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,SADK,CACL,aAAa,CAAC;EACV,KAAK,EAAE,eAAe;EACtB,GAAG,EAAE,cAAc;CACtB;;AAJL,AAMQ,SANC,CAKL,IAAI,CACA,YAAY,CAAA;EACR,KAAK,EAAE,eAAe;CACzB",
+    "sources": [
+        "notification-sidebar.component.scss"
+    ],
+    "names": [],
+    "file": "notification-sidebar.component.css"
+}

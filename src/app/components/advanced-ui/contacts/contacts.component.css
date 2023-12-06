@@ -1,0 +1,9 @@
+@media (min-width: 992px) {
+  .main-content-app, .main-content-calEndar, .main-content-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: calc(100vh - 59px);
+  }
+}
+/*# sourceMappingURL=contacts.component.css.map */

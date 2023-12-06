@@ -1,0 +1,62 @@
+::ng-deep .tooltipPrimary .tooltip-inner {
+  background-color: #6259ca;
+  font-size: 125%;
+}
+
+::ng-deep .tooltipPrimary .arrow::before {
+  border-top-color: #6259ca;
+}
+
+::ng-deep .tooltipSecondary .tooltip-inner {
+  background-color: #f1388b;
+  font-size: 125%;
+}
+
+::ng-deep .tooltipSecondary .arrow::before {
+  border-bottom-color: #f1388b;
+}
+
+::ng-deep .tooltipInfo .tooltip-inner {
+  background-color: #06aff1;
+  font-size: 125%;
+}
+
+::ng-deep .tooltipInfo .arrow::before {
+  border-left-color: #06aff1;
+}
+
+::ng-deep .tooltipDanger .tooltip-inner {
+  background-color: #fd6074;
+  font-size: 125%;
+}
+
+::ng-deep .tooltipDanger .arrow::before {
+  border-right-color: #fd6074;
+}
+
+::ng-deep .tooltip {
+  z-index: 9 !important;
+}
+
+@media (max-width: 350px) {
+  ::ng-deep .bs-tooltip-right.show {
+    -webkit-transform: translate(70px, 40px) !important;
+            transform: translate(70px, 40px) !important;
+  }
+  ::ng-deep .bs-tooltip-left.show {
+    -webkit-transform: translate(20px, 40px) !important;
+            transform: translate(20px, 40px) !important;
+  }
+}
+
+@media (max-width: 400px) {
+  ::ng-deep .tooltip.tooltipDanger.fade.bs-tooltip-right {
+    -webkit-transform: translate(50px, 40px) !important;
+            transform: translate(50px, 40px) !important;
+  }
+  ::ng-deep .tooltip.tooltipInfo.fade.bs-tooltip-left {
+    -webkit-transform: translate(50px, 40px) !important;
+            transform: translate(50px, 40px) !important;
+  }
+}
+/*# sourceMappingURL=tooltip.component.css.map */

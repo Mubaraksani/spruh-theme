@@ -1,0 +1,57 @@
+.fa.fa-heart,
+.fa.fa-star {
+  letter-spacing: 5px;
+}
+
+@media (max-width: 340px) {
+  .d-inline-flex.rating-size, .d-inline-flex.ng-rating {
+    width: 270px;
+    overflow: hidden;
+  }
+  .d-inline-flex.rating-size span, .d-inline-flex.ng-rating span {
+    width: 24px;
+  }
+}
+
+::ng-deep .ng-rating:focus,
+::ng-deep .rating-size:focus {
+  outline: 0;
+}
+
+::ng-deep .star {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: #f0f0f2;
+}
+
+::ng-deep .full {
+  color: #ff9b21;
+}
+
+::ng-deep .half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: #ff9b21;
+}
+
+::ng-deep .heartHalf {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: #f16d75;
+}
+
+::ng-deep .filled {
+  color: #ff9b21;
+}
+
+::ng-deep .bad {
+  color: #deb0b0;
+}
+
+::ng-deep .filled.bad {
+  color: #f16d75;
+}
+/*# sourceMappingURL=ratings.component.css.map */

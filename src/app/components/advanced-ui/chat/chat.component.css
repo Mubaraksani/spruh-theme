@@ -1,0 +1,10 @@
+.dropdown-menu {
+  -webkit-transform: translate(-140px, 24px);
+          transform: translate(-140px, 24px);
+}
+
+.tooltip {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+/*# sourceMappingURL=chat.component.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,SADK,CACL,aAAa,CAAA;EACT,OAAO,EAAE,aAAa;CACzB",
+    "sources": [
+        "sidemenu.component.scss"
+    ],
+    "names": [],
+    "file": "sidemenu.component.css"
+}

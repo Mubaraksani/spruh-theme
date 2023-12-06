@@ -1,0 +1,5 @@
+.dropdown-menu.show {
+  -webkit-transform: translate(0, -258px) !important;
+          transform: translate(0, -258px) !important;
+}
+/*# sourceMappingURL=form-layouts.component.css.map */

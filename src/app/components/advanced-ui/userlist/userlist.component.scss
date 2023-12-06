@@ -1,0 +1,21 @@
+
+.option-dots:hover {
+    background-color: #f0f0ff !important;
+}
+.dropdown-menu{
+    z-index: 9 !important;
+}
+::ng-deep{
+    body:not(.rtl) .dropdown-menu-right.dropdown-menu{
+        transform: translate(-120px , 40px) !important;
+    }
+    
+    body.rtl .dropdown-menu-right.dropdown-menu{
+        top: 0px;
+        transform: translate(121px, 40px) !important;
+        right: 0;
+    }
+    .dark-theme .option-dots:hover {
+        background-color: var(--dark-body) !important;
+    }
+}

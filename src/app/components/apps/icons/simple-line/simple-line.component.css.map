@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "simple-line.component.scss"
+    ],
+    "names": [],
+    "file": "simple-line.component.css"
+}

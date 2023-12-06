@@ -1,0 +1,10 @@
+::ng-deep{
+    .dark-theme{
+        .header-brand-img{
+            display: none !important;
+        }
+        .header-dark-brand-img{
+            display: block !important;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+::ng-deep aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li.current .step-indicator {
+  background-color: #6259ca !important;
+}
+
+::ng-deep aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li:not(:last-child):after,
+::ng-deep aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li:not(:last-child):after,
+::ng-deep aw-wizard-navigation-bar.vertical.large-filled-symbols ul.steps-indicator li:not(:last-child):after {
+  background-color: #e8e8f7;
+}
+
+::ng-deep aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li .step-indicator {
+  background-color: #f0f0ff;
+}
+
+::ng-deep aw-wizard-navigation-bar ul.steps-indicator li a .label {
+  color: #8f9cc0;
+}
+
+::ng-deep aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li.current .step-indicator {
+  border: 2px solid #6259ca;
+  color: #8f9cc0;
+}
+
+::ng-deep aw-wizard-navigation-bar.vertical.large-filled-symbols ul.steps-indicator li.current .step-indicator {
+  background-color: #6259ca;
+  color: #ffffff;
+}
+
+::ng-deep aw-wizard-navigation-bar.vertical.large-filled-symbols ul.steps-indicator li.done .step-indicator {
+  color: #ffffff;
+}
+
+::ng-deep aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li .step-indicator {
+  border: 2px solid #e8e8f7;
+}
+
+::ng-deep aw-wizard-navigation-bar.vertical.large-filled-symbols ul.steps-indicator li .step-indicator {
+  background-color: #e8e8f7;
+}
+
+::ng-deep aw-wizard-navigation-bar.horizontal ul.steps-indicator li a .label {
+  display: none;
+}
+
+::ng-deep aw-wizard-navigation-bar.horizontal ul.steps-indicator li.current a .label {
+  display: inline-block;
+}
+
+::ng-deep aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li.current.done .step-indicator {
+  background-color: #339933 !important;
+}
+/*# sourceMappingURL=form-wizards.component.css.map */

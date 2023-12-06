@@ -1,0 +1,9 @@
+::ng-deep .sidebar-icon {
+  right: 36px !important;
+  top: 6px !important;
+}
+
+::ng-deep .rtl .float-right {
+  float: left !important;
+}
+/*# sourceMappingURL=notification-sidebar.component.css.map */

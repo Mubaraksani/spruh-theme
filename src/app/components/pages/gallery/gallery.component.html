@@ -1,0 +1,32 @@
+<app-page-header [title]="'Gallery'" [items]="['Pages']" [active_item]="'Gallery'"></app-page-header> 
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Light Gallery</h6>
+                    <p class="text-muted card-sub-title">A customizable, modular, responsive, gallery plugin
+                        for Angular.</p>
+                </div>
+                <ul id="lightgallery" class="list-unstyled row mb-0">
+                    <!-- <li class="col-xs-6 col-sm-4 col-md-4 col-xl-4 mb-3" *ngFor="let img of GalleryImage">
+                        <a href="javascript:void(0)" class="wd-100p">
+                            <img class="img-responsive" [src]="img.modal.img" alt="Thumb"
+                                (click)="openImageModalRowDescription(img)">
+                        </a>
+                    </li> -->
+                    <ks-plain-gallery [id]="203" [images]="images"
+                      [config]="libConfigPlainGalleryGrid"
+                      (clickImage)="onShow(203, $event)"></ks-plain-gallery>
+                </ul>
+            </div>
+            <!-- <ks-modal-gallery [id]="1" [modalImages]="GalleryImage"
+                [plainGalleryConfig]="customPlainGalleryRowDescConfig" [currentImageConfig]="{downloadable : true}"
+                [buttonsConfig]="buttonsConfigCustom">
+            </ks-modal-gallery> -->
+        </div>
+    </div>
+</div>
+<!-- End Row -->

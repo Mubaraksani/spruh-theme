@@ -1,0 +1,84 @@
+::ng-deep .dataTable-top,
+::ng-deep .dataTable-bottom {
+  padding: 9px 0px !important;
+}
+
+::ng-deep .dataTable-wrapper.no-footer .dataTable-container {
+  border: 1px solid #e8e8f7;
+}
+
+::ng-deep .dataTable-container {
+  height: 100% !important;
+  width: 100%;
+  overflow: scroll;
+}
+
+::ng-deep .dataTable-input,
+::ng-deep .dataTable-selector {
+  border: 1px solid #e8e8f7;
+  border-radius: 5px;
+  outline: 0;
+}
+
+::ng-deep .dataTable-table > thead > tr > th {
+  border-bottom: 1px solid #e8e8f7;
+}
+
+::ng-deep .dataTable-table > tbody > tr > td,
+::ng-deep .dataTable-table > tbody > tr > th,
+::ng-deep .dataTable-table > tfoot > tr > td,
+::ng-deep .dataTable-table > tfoot > tr > th,
+::ng-deep .dataTable-table > thead > tr > td,
+::ng-deep .dataTable-table > thead > tr > th {
+  vertical-align: middle;
+}
+
+::ng-deep .dataTable-pagination {
+  white-space: nowrap;
+  border: 1px solid #dee2e6;
+}
+
+::ng-deep .dataTable-pagination li:first-child a {
+  border-left: 0;
+}
+
+::ng-deep .dataTable-pagination li a {
+  color: #71719a;
+  cursor: pointer;
+  background-color: #fff;
+  border-left: 1px solid #dee2e6;
+}
+
+::ng-deep .dataTable-pagination a:hover {
+  background-color: #f0f0ff;
+  color: #6259ca;
+  border: 1px solid #f0f0ff;
+}
+
+::ng-deep .dataTable-pagination a {
+  margin: 0;
+}
+
+::ng-deep .dataTable-pagination li.active a {
+  background-color: #6259ca;
+  border-color: #6259ca;
+  color: #fff;
+  cursor: pointer;
+}
+
+::ng-deep .dataTable-pagination .active a,
+::ng-deep .dataTable-pagination .active a:focus,
+::ng-deep .dataTable-pagination .active a:hover {
+  background-color: #6259ca;
+}
+
+@media (max-width: 440px) {
+  ::ng-deep .dataTable-top > div:last-child {
+    float: left;
+  }
+}
+
+::ng-deep .dataTable-sorter::before, ::ng-deep .dataTable-sorter::after {
+  right: -9px;
+}
+/*# sourceMappingURL=transactions.component.css.map */

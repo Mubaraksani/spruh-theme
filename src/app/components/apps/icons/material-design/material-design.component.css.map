@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "material-design.component.scss"
+    ],
+    "names": [],
+    "file": "material-design.component.css"
+}

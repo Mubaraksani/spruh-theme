@@ -1,0 +1,183 @@
+<!-- Sidemenu -->
+<div class="sticky" [ngClass]="{ 'sticky-pin': scrolled }">
+    <div class="main-menu main-sidebar main-sidebar-sticky side-menu sidemenu-scroll">
+        <perfect-scrollbar>
+            <div class="main-sidebar-header main-container-1 active">
+                <div class="sidemenu-logo">
+                    <a class="main-logo" routerLink="/dashboard">
+                        <img src="./assets/img/brand/logo-light.png" class="header-brand-img desktop-logo" alt="logo">
+                        <img src="./assets/img/brand/icon-light.png" class="header-brand-img icon-logo" alt="logo">
+                        <img src="./assets/img/brand/logo.png" class="header-brand-img desktop-logo theme-logo"
+                            alt="logo">
+                        <img src="./assets/img/brand/icon.png" class="header-brand-img icon-logo theme-logo" alt="logo">
+                    </a>
+                </div>
+                <div class="main-sidebar-body main-body-1 is-expanded">
+                    <!-- left-arrow -->
+                    <div class="slide-left disabled" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg"
+                            fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+                        </svg></div>
+                    <ul class="menu-nav nav">
+                        <!-- 1st Level Menu -->
+                        <li class="nav-item" *ngFor="let menuItem of menuItems"
+                            [ngClass]="{active: menuItem.active, 'is-expanded': menuItem.active, 'show': menuItem.active, 'nav-item': menuItem.type , 'nav-header': menuItem.headTitle }">
+                        
+                            <!-- head title  -->
+                            <span *ngIf="menuItem.headTitle" class="nav-label" translate>{{menuItem.headTitle}}</span>
+                        
+                            <!-- has-Link -->
+                            <a class="nav-link" [routerLink]="!menuItem.type ? null : [menuItem.path]" routerLinkActive="active"
+                                *ngIf="menuItem.type === 'link' " (click)="toggleNavActive(menuItem)">
+                                <span class="shape1"></span>
+                                <span class="shape2"></span>
+                                <i class="{{menuItem.icon}} sidemenu-icon menu-icon"></i>
+                                <span class="sidemenu-label" translate>{{menuItem.title}}</span>
+                            </a>
+                            <!-- has-empty -->
+                            <a class="nav-link" href="javascript:;" *ngIf="menuItem.type === 'empty'" (click)="toggleNavActive(menuItem)">
+                                <span class="shape1"></span>
+                                <span class="shape2"></span>
+                                <i class="{{menuItem.icon}} sidemenu-icon menu-icon"></i>
+                                <span class="sidemenu-label" translate>{{menuItem.title}}</span>
+                            </a>
+                            <!-- has-Sub -->
+                            <a class="nav-link with-sub" [routerLink]="menuItem.type ? null: [menuItem.path]"
+                                [ngClass]="{active: menuItem.active}" *ngIf="menuItem.type === 'sub'" (click)="toggleNavActive(menuItem)">
+                                <span class="shape1"></span>
+                                <span class="shape2"></span>
+                                <i class="{{menuItem.icon}} sidemenu-icon menu-icon"></i>
+                                <span class="sidemenu-label" translate>{{menuItem.title}}</span>
+                                <span class="badge {{menuItem.badgeClass}} side-badge" *ngIf="menuItem.badgeClass && menuItem.badgeValue">
+                                    {{menuItem.badgeValue}}
+                                </span>
+                                <i class="angle fe fe-chevron-right" [ngClass]="{ 'd-none': menuItem.badgeClass}"></i>
+                        
+                            </a>
+                        
+                            <!-- 2nd Level menu -->
+                            <ul class="nav-sub" *ngIf="menuItem.children" [ngClass]="{'open': menuItem.active}">
+                                <li class="nav-sub-item" *ngFor="let childrenItem of menuItem.children"
+                                    [ngClass]="{'show': childrenItem.active, active: childrenItem.active}">
+                        
+                                    <!-- link -->
+                                    <a class="nav-sub-link" [routerLink]="!childrenItem.type ? null : [childrenItem.path] "
+                                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                                        *ngIf="childrenItem.type === 'link' " (click)="toggleNavActive(childrenItem)" translate>
+                                        {{childrenItem.title}}
+                                    </a>
+                                    <!-- empty -->
+                                    <a class="nav-sub-link" href="javascript:;" *ngIf="childrenItem.type === 'empty' "
+                                        (click)="toggleNavActive(childrenItem)" translate>
+                                        {{childrenItem.title}}
+                                    </a>
+                        
+                                    <!-- sub -->
+                                    <a class="nav-sub-link sub-with-sub" [ngClass]="{active: childrenItem.active}"
+                                        [routerLink]="childrenItem.type ? null : [childrenItem.path]" *ngIf="childrenItem.type === 'sub' "
+                                        (click)="toggleNavActive(childrenItem)">
+                                        <span class="sidemenu-label" translate>{{childrenItem.title}}</span>
+                                        <i class="angle fe fe-chevron-right"></i>
+                                    </a>
+                        
+                                    <!-- 3rd Level menu -->
+                                    <ul class="sub-nav-sub" *ngIf="childrenItem.children" [ngClass]="{'open': childrenItem.active}">
+                                        <li class="nav-sub-item" *ngFor="let childrenSubItem of childrenItem.children"
+                                            [ngClass]="{'show': childrenSubItem.active}">
+                                            <!-- link -->
+                                            <a class="nav-sub-link" routerLinkActive="active"
+                                                [routerLink]="!childrenSubItem.type ?  null : [childrenSubItem.path]"
+                                                *ngIf="childrenSubItem.type === 'link'" [routerLinkActiveOptions]="{exact : true}" translate>
+                                                {{childrenSubItem.title}}
+                                            </a>
+                                            <!-- empty -->
+                                            <a class="nav-sub-link" href="javascript:;" *ngIf="childrenSubItem.type === 'empty'" translate>
+                                                {{childrenSubItem.title}}
+                                            </a>
+                                            <!-- sub -->
+                                            <a class="nav-sub-link sub-with-sub"
+                                                [routerLink]="childrenSubItem.type ? null : [childrenSubItem.path]"
+                                                *ngIf="childrenSubItem.type === 'sub'" (click)="toggleNavActive(childrenSubItem)">
+                                                <span class="sidemenu-label" translate>{{childrenSubItem.title}}</span>
+                                                <i class="angle fe fe-chevron-right"></i>
+                                            </a>
+                        
+                                            <!--4th level -->
+                                            <ul class="sub-nav-sub" *ngIf="childrenSubItem.children"
+                                                [ngClass]="{'open': childrenSubItem.active}">
+                                                <!-- link  -->
+                                                <li class="nav-sub-item" *ngFor="let childrenSubItem1 of childrenSubItem.children"
+                                                    [ngClass]="{'show': childrenSubItem1.active}">
+                                                    <a class="nav-sub-link" routerLinkActive="active"
+                                                        [routerLink]="!childrenSubItem1.type ? null :[childrenSubItem1.path]"
+                                                        *ngIf="childrenSubItem1.type === 'link'" translate>
+                                                        {{childrenSubItem1.title}}
+                                                    </a>
+                                                    <!-- empty  -->
+                                                    <a class="nav-sub-link" href="javascript:;" *ngIf="childrenSubItem1.type === 'empty'"
+                                                        translate>
+                                                        {{childrenSubItem1.title}}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                        
+                                        </li>
+                                    </ul>
+                        
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- modal trigger sideMenu option  -->
+                        <li class="nav-item">
+                            <a style="cursor: pointer;" (click)="openScrollableContent(scrolling)" class="nav-link">
+                                <i class="fa fa-comment sidemenu-icon menu-icon" aria-hidden="true"></i>
+                                {{'Modal'}}</a>
+                        </li>
+                    </ul>
+                    <!-- right-arrow  -->
+                    <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+                        </svg></div>
+                </div>
+            </div>
+        </perfect-scrollbar>
+    </div>
+</div>
+<!-- End Sidemenu -->
+<ng-template #scrolling let-modal>
+    <!-- scrolling modal -->
+    <div class="modal-header">
+        <h6 class="modal-title">Scrolling With Content Modal</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I
+            will give you a complete account of the system, and expound the actual teachings of the great explorer of
+            the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself,
+            because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter
+            consequences that are extremely painful. </p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+            facilis est et expedita distinctio.</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized
+            by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble
+            that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will,
+            which is the same as saying through shrinking from toil and pain.</p>
+        <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is
+            untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be
+            welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the
+            obligations of business it will frequently occur that pleasures have to be repudiated and annoyances
+            accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects
+            pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn ripple btn-primary" type="button">Save changes</button>
+        <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>

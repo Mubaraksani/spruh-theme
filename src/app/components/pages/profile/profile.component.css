@@ -1,0 +1,27 @@
+::ng-deep .option-dots:hover {
+  background: none;
+}
+
+::ng-deep .btn.btn-rounded.btn-danger {
+  margin-right: 5px;
+}
+
+::ng-deep .ng-select, ::ng-deep .ng-select div, ::ng-deep .ng-select input, ::ng-deep .ng-select span {
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+}
+
+.user-lock .dropdown-menu {
+  -webkit-transform: translate(0px, 21px) !important;
+          transform: translate(0px, 21px) !important;
+  z-index: 9 !important;
+  right: 0%;
+  left: initial !important;
+}
+
+.media .shadow.dropdown-menu[x-placement^=bottom] {
+  -webkit-transform: translate(-150px, 24px) !important;
+          transform: translate(-150px, 24px) !important;
+  z-index: 9 !important;
+}
+/*# sourceMappingURL=profile.component.css.map */

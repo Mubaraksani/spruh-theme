@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,SADK,CACL,YAAY,CAAC;EACT,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,cAAc;EACtB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,CAAC;EACR,KAAK,EAAE,IAAI;EACX,aAAa,EAAE,KAAK;CACvB",
+    "sources": [
+        "error-layout.component.scss"
+    ],
+    "names": [],
+    "file": "error-layout.component.css"
+}

@@ -1,0 +1,63 @@
+<app-page-header [title]="'Transcations'" [items]="['Crypto Currencies']" [active_item]="'Transcations'"></app-page-header> 
+
+<!-- row -->
+<div class="row row-sm">
+    <div class="col-md-12 col-lg-12 col-xl-12">
+        <div class="card custom-card transcation-crypto">
+            <div class="card-header border-bottom-0">
+                <div class="main-content-label">Transaction History</div>
+                <p class="d-block tx-12 mb-0 mt-2 text-muted">Transaction History it shows you who sent the transaction, how much has been sent, its destination and the fees that were paid for it.</p>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table text-nowrap" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th class="wd-1"> <p></p> </th>
+                                <th>TRANSACTION HASH</th>
+                                <th>Date</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Coin</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr *ngFor="let tranData of transaction">
+                                <td>
+                                    <span class="crypto-icon bg-primary-transparent me-3 my-auto">
+                                        <i class="fe {{tranData.icon}} text-primary"></i>
+                                    </span>
+                                </td>
+                                <td class="font-weight-bold">{{tranData.transaction}}</td>
+                                <td>{{tranData.date}}</td>
+                                <td>{{tranData.from}}</td>
+                                <td class="d-flex my-auto"><img src="{{tranData.img}}" class="avatar avatar-md me-2" alt=""><span class="my-auto">{{tranData.to}}</span></td>
+                                <td class="font-weight-semibold"><img src="{{tranData.coin}}" class="wd-30 hd-30 me-2" alt="">{{tranData.coinName}}</td>
+                                <td class="font-weight-bold"
+                                    [ngClass]="{'text-success':tranData.amount > 0,
+                                                'text-danger':tranData.amount < 0,
+                                                'text-muted': tranData.status === 'pending'}">
+                                    {{tranData.amount}}
+                                </td>
+                                <td>
+                                    <span class="font-weight-semibold"
+                                        [ngClass]="{'text-success':tranData.status === 'completed',
+                                                    'text-danger':tranData.status === 'cancelled',
+                                                    'text-muted': tranData.status === 'pending'}">
+                                                    {{tranData.status | uppercase}}
+                                    </span>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+</div>
+<!-- Row End -->

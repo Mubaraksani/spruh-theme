@@ -1,0 +1,245 @@
+::ng-deep .ck.ck-toolbar {
+  background: #eaedf7;
+  border: 0;
+  border-radius: 0;
+}
+
+::ng-deep .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+  border: 0;
+}
+
+::ng-deep .ck.ck-editor__main > .ck-editor__editable {
+  outline: 0;
+}
+
+::ng-deep .ck.ck-editor__main {
+  outline: 0;
+  border: 1px solid #ebecf1;
+}
+
+::ng-deep .ck.ck-button:not(.ck-disabled):active,
+::ng-deep a.ck.ck-button:not(.ck-disabled):active,
+::ng-deep .ck.ck-button.ck-on,
+::ng-deep a.ck.ck-button.ck-on {
+  border: 1px solid transparent;
+  background: transparent !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+::ng-deep .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+::ng-deep .ck.ck-button {
+  padding: 5px !important;
+  min-width: inherit;
+  min-height: inherit;
+  margin: 0;
+  background-color: #f0f0ff;
+  border: 1px solid #d7dcec;
+  border-radius: 3px !important;
+  line-height: initial;
+}
+
+::ng-deep .ck.ck-list__item .ck-button {
+  border: none;
+}
+
+::ng-deep .ck.ck-list__item .ck-button .ck-button__label {
+  color: #647194;
+}
+
+::ng-deep .ck.ck-dropdown,
+::ng-deep .ck.ck-toolbar > .ck-toolbar__items > * {
+  margin: 0;
+}
+
+::ng-deep .ck.ck-toolbar .ck.ck-toolbar__separator {
+  display: none;
+}
+
+::ng-deep .ck.ck-dropdown__panel {
+  border: 1px solid #ebecf1;
+  -webkit-box-shadow: 0px 16px 18px rgba(4, 4, 7, 0.1);
+          box-shadow: 0px 16px 18px rgba(4, 4, 7, 0.1);
+  border-radius: 4px;
+}
+
+::ng-deep .ck.ck-input-text:focus {
+  border: 1px solid #d7dcec;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+::ng-deep .ck.ck-icon {
+  font-size: 11px;
+}
+
+::ng-deep .ck.ck-list__item .ck-button.ck-on {
+  color: #647194;
+}
+
+::ng-deep .ck.ck-button:hover:not(.ck-disabled) {
+  background: #dbe0ea !important;
+}
+
+::ng-deep .ql-snow .ql-picker-options {
+  padding: 0 !important;
+}
+
+::ng-deep .ql-snow .ql-picker-options .ql-picker-item {
+  padding: 5px;
+}
+
+::ng-deep .angular-editor .angular-editor-wrapper .angular-editor-textarea {
+  outline: 0;
+  margin-top: 0;
+  border-top: 0 !important;
+}
+
+::ng-deep .angular-editor-toolbar {
+  background: #eaedf7 !important;
+}
+
+::ng-deep .angular-editor-toolbar-set button {
+  background: #f0f0ff !important;
+}
+
+::ng-deep .angular-editor-button {
+  border: 1px solid #d7dcec !important;
+}
+
+::ng-deep .ae-font .ae-picker-label:before {
+  background: -webkit-gradient(linear, left top, right top, from(#f0f0ff), to(#f0f0ff)) !important;
+  background: linear-gradient(to right, #f0f0ff, #f0f0ff 100%) !important;
+}
+
+::ng-deep .ae-font.ae-picker:hover,
+::ng-deep .angular-editor-button:hover {
+  background: #dbe0ea !important;
+}
+
+::ng-deep .angular-editor-button.active {
+  background: #fff !important;
+}
+
+::ng-deep .ae-font.ae-expanded .ae-picker-label,
+::ng-deep .ae-font.ae-expanded .ae-picker-label svg {
+  color: black !important;
+}
+
+::ng-deep .ae-font .ae-picker-options .ae-picker-item.selected {
+  color: #647194 !important;
+  background: #fff !important;
+}
+
+::ng-deep .ae-font .ae-picker-options .ae-picker-item.focused,
+::ng-deep .ae-font .ae-picker-options .ae-picker-item:hover {
+  color: #647194 !important;
+  background: #fff !important;
+}
+
+::ng-deep .ql-toolbar.ql-snow {
+  border: 1px solid #ebecf1;
+  background: #eaedf7;
+}
+
+::ng-deep .ql-container.ql-snow {
+  border: 1px solid #ebecf1;
+}
+
+::ng-deep .ql-snow.ql-toolbar button,
+::ng-deep .ql-snow .ql-toolbar button {
+  background: #f0f0ff;
+  border: 1px solid #dbe0ea;
+  margin-right: 5px;
+}
+
+::ng-deep .ql-formats .ql-picker .ql-picker-label {
+  outline: none;
+}
+
+::ng-deep .ql-snow.ql-toolbar button:hover,
+::ng-deep .ql-snow .ql-toolbar button:hover,
+::ng-deep .ql-snow.ql-toolbar button:focus,
+::ng-deep .ql-snow .ql-toolbar button:focus,
+::ng-deep .ql-snow.ql-toolbar button.ql-active,
+::ng-deep .ql-snow .ql-toolbar button.ql-active,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label:hover,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label:hover,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label.ql-active,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label.ql-active,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item:hover,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item:hover,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+  background: #dbe0ea;
+  color: black;
+  outline: none;
+}
+
+::ng-deep .ql-snow.ql-toolbar button:hover .ql-stroke,
+::ng-deep .ql-snow .ql-toolbar button:hover .ql-stroke,
+::ng-deep .ql-snow.ql-toolbar button:focus .ql-stroke,
+::ng-deep .ql-snow .ql-toolbar button:focus .ql-stroke,
+::ng-deep .ql-snow.ql-toolbar button.ql-active .ql-stroke,
+::ng-deep .ql-snow .ql-toolbar button.ql-active .ql-stroke,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+::ng-deep .ql-snow.ql-toolbar button:hover .ql-stroke-miter,
+::ng-deep .ql-snow .ql-toolbar button:hover .ql-stroke-miter,
+::ng-deep .ql-snow.ql-toolbar button:focus .ql-stroke-miter,
+::ng-deep .ql-snow .ql-toolbar button:focus .ql-stroke-miter,
+::ng-deep .ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,
+::ng-deep .ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+  stroke: black;
+}
+
+::ng-deep .ql-snow.ql-toolbar button:hover .ql-fill,
+::ng-deep .ql-snow .ql-toolbar button:hover .ql-fill,
+::ng-deep .ql-snow.ql-toolbar button:focus .ql-fill,
+::ng-deep .ql-snow .ql-toolbar button:focus .ql-fill,
+::ng-deep .ql-snow.ql-toolbar button.ql-active .ql-fill,
+::ng-deep .ql-snow .ql-toolbar button.ql-active .ql-fill,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+::ng-deep .ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill,
+::ng-deep .ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,
+::ng-deep .ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill,
+::ng-deep .ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill,
+::ng-deep .ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,
+::ng-deep .ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+::ng-deep .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
+::ng-deep .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
+  fill: black;
+}
+/*# sourceMappingURL=form-editors.component.css.map */

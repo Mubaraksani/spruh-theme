@@ -1,0 +1,218 @@
+<div class="page-header">
+   <div>
+      <h2 class="main-content-title tx-24 mg-b-5">{{'Add Users' | translate | titlecase}}</h2>
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="javascript:;" [routerLink]="['/dashboard']">{{'dashboard' |
+               translate | titlecase}}</a></li>
+               <li class="breadcrumb-item"><a href="javascript:;" [routerLink]="['/users/users-list']">{{'Users List' |
+                     translate | titlecase}}</a></li>
+         <li class="breadcrumb-item active" aria-current="page">{{'Add Users' | translate | titlecase}}</li>
+      </ol>
+   </div>
+</div>
+<!-- Row -->
+<div class="row row-sm">
+   <div class="col-lg-12 col-md-12 col-md-12">
+      <div class="card custom-card">
+         <div class="card-body">
+            <form class="form-horizontal" [formGroup]="form">
+               <div class="row row-sm align-items-center">
+                  <div class="col-md-4 col-lg-4">
+                     <div class="form-group">
+                        <label translate>First Name</label>
+                        <input type="text" formControlName="first_name" class="form-control"
+                           placeholder="{{'Enter First Name' | translate}}"
+                           [ngClass]="{'has-success': form.get('first_name')?.valid}" />
+                        <ng-container class="invalid"
+                           *ngIf="form.get('first_name')?.hasError('required') && (form.get('first_name')?.touched || form.get('first_name')?.dirty)">
+                           <small class="tx-danger" translate>Please Enter First Name</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-4">
+                     <div class="form-group">
+                        <label translate>Last Name</label>
+                        <input type="text" formControlName="last_name" class="form-control"
+                           placeholder="{{'Enter Last Name' | translate}}"
+                           [ngClass]="{'has-success': form.get('last_name')?.valid}" />
+                        <ng-container class="invalid"
+                           *ngIf="form.get('last_name')?.hasError('required') && (form.get('last_name')?.touched || form.get('last_name')?.dirty)">
+                           <small class="tx-danger" translate>Please Enter Last Name</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-4">
+                     <div class="form-group">
+                        <label translate>Date Of Birth</label>
+                        <div class="input-group">
+                           <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                 <i class="fe fe-calendar lh--9 op-6"></i>
+                              </div>
+                           </div>
+                           <input class="form-control" formControlName="dob" (click)="dob_d.toggle()" placeholder="YYYY/MM/DD" name="dp" [(ngModel)]="dob"
+                              ngbDatepicker #dob_d="ngbDatepicker">
+                        </div>
+                        <ng-container class="invalid"
+                           *ngIf="form.get('dob')?.hasError('required') && (form.get('dob')?.touched || form.get('dob')?.dirty)">
+                           <small class="tx-danger" translate>Please Select Date</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-4">
+                     <div class="form-group">
+                        <label translate>Phone Number</label>
+                        <input type="text" formControlName="phone_number" class="form-control"
+                           placeholder="{{'Enter Phone Number' | translate}}" (keypress)="keyPress($event)"
+                           [ngClass]="{'has-success': form.get('phone_number')?.valid}" />
+                        <ng-container class="invalid"
+                           *ngIf="form.get('phone_number')?.hasError('required') && (form.get('phone_number')?.touched || form.get('phone_number')?.dirty)">
+                           <small class="tx-danger" translate>Please Enter Phone Number</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-4">
+                     <div class="form-group">
+                        <label translate>Email</label>
+                        <input type="email" formControlName="email" class="form-control"
+                           placeholder="{{'Enter Email' | translate}}"
+                           [ngClass]="{'has-success': form.get('email')?.valid}" />
+                        <ng-container class="invalid"
+                           *ngIf="form.get('email')?.hasError('required') && (form.get('email')?.touched || form.get('email')?.dirty)">
+                           <small class="tx-danger" translate>Please Enter Email</small>
+                        </ng-container>
+                           <ng-container class="invalid"
+                              *ngIf="form.get('email')?.hasError('email') && (form.get('email')?.touched || form.get('email')?.dirty)">
+                              <small class="tx-danger" translate>Please Enter Valid Email</small>
+                           </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-4">
+                     <div class="form-group">
+                        <label translate>Date Of Joining</label>
+                        <div class="input-group">
+                           <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                 <i class="fe fe-calendar lh--9 op-6"></i>
+                              </div>
+                           </div>
+                           <input class="form-control" formControlName="joining_date" (click)="join_d.toggle()" placeholder="YYYY/MM/DD" name="dp" [(ngModel)]="joinDate"
+                              ngbDatepicker #join_d="ngbDatepicker">
+                        </div>
+                        <ng-container class="invalid"
+                           *ngIf="form.get('joining_date')?.hasError('required') && (form.get('joining_date')?.touched || form.get('joining_date')?.dirty)">
+                           <small class="tx-danger" translate>Please Select Date</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-4">
+                     <div class="form-group">
+                        <label class="">Position</label>
+                        <ng-select class="form-control p-0" formControlName="position">
+                           <ng-option value="1">Boston</ng-option>
+                           <ng-option value="2">Washington DC</ng-option>
+                           <ng-option value="3">San Francisco</ng-option>
+                           <ng-option value="4">Las Vegas</ng-option>
+                        </ng-select>
+                        <ng-container class="invalid"
+                           *ngIf="form.get('position')?.hasError('required') && (form.get('position')?.touched || form.get('position')?.dirty)">
+                           <small class="tx-danger" translate>Please Select Date</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-lg-6">
+                     <div class="form-group">
+                        <label class="">Type</label>
+                        <div class="d-md-flex ad-post-details">
+                           <label class="custom-control custom-radio mb-2 me-4">
+                              <input type="radio" class="custom-control-input" formControlName="type" name="type" value="employed">
+                              <span class="custom-control-label">Employed</span>
+                           </label>
+                           <label class="custom-control custom-radio  mb-2 me-4">
+                              <input type="radio" class="custom-control-input" formControlName="type" name="type" value="self-employed">
+                              <span class="custom-control-label">Self-Employed</span>
+                           </label>
+                           <label class="custom-control custom-radio mb-2 me-4">
+                              <input type="radio" class="custom-control-input" formControlName="type" name="type" value="unemployed">
+                              <span class="custom-control-label">Unemployed</span>
+                           </label>
+                           <label class="custom-control custom-radio mb-2">
+                              <input type="radio" class="custom-control-input" formControlName="type" name="type" value="student">
+                              <span class="custom-control-label">Student</span>
+                           </label>
+                        </div>
+                        <ng-container class="invalid"
+                           *ngIf="form.get('type')?.hasError('required') && (form.get('type')?.touched || form.get('type')?.dirty)">
+                           <small class="text-danger" translate>Please Select type</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 col-md-10">
+                     <div class="form-group mb-0">
+                        <label translate>Upload Resume</label>
+                        <small></small>
+                        <input type="file" class="form-control" formControlName="resume" (change)="getFile($event)"
+                          accept="image/*, .pdf"  >
+                        <ng-container class="invalid"
+                           *ngIf="form.get('resume')?.hasError('required') && (form.get('resume')?.touched || form.get('resume')?.dirty)">
+                           <small class="text-danger" translate>Please Upload Resume</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-lg-1 col-md-2 align-self-center">
+                     <ng-container >
+                        <pdf-viewer  [src]="pdf_result" [render-text]="true" [original-size]="false" #pdf
+                           (error)="pdf.src='assets/img/pngs/blank_png.png'" style="width: 68px; height: 68px;"></pdf-viewer>
+                     </ng-container>
+                     <!-- <ng-container *ngIf="!pdf_result">
+                        <img [src]="pdf_result"  style="object-fit: contain;" height="68px" width="68px">
+                     </ng-container> -->
+                  </div>
+                  <div class="col-lg-5 col-md-10">
+                     <div class="form-group mb-0">
+                        <label translate>Profile Picture</label>
+                        <small>(only .png, .jpg, .jpeg are allowed)</small>
+                        <input type="file" class="form-control" formControlName="profile_img" (change)="getImage($event)"
+                           accept=".png, .jpg, .jpeg">
+                        <ng-container class="invalid"
+                           *ngIf="form.get('profile_img')?.hasError('required') && (form.get('profile_img')?.touched || form.get('profile_img')?.dirty)">
+                           <small class="text-danger" translate>Please provide profile
+                              image</small>
+                        </ng-container>
+                     </div>
+                  </div>
+                  <div class="col-lg-1 col-md-2 align-self-center">
+                     <img [src]="image_result" #img8 (error)="img8.src = 'assets/img/users/blank_profile.png'"
+                        style="object-fit: contain;" height="68px" width="68px">
+                  </div>
+                   <div class="col-md-12 col-lg-12">
+                  <label class="mt-2">Upload File</label>
+                  <small></small>
+                  <div class="p-4 border rounded-6 mb-4 form-group">
+                     <div>
+                        <div class="custom-dropzone" ngx-dropzone [accept]="'image/*'"
+                           (change)="onSelect($event)">
+                           <ngx-dropzone-label>
+                              <div>
+                                 <h3 style="margin-bottom: 10px;">{{'Add Images' | translate}}</h3>
+                              </div>
+                           </ngx-dropzone-label>
+                           <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true"
+                              (removed)="onRemove(f)">
+                              <!-- <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label> -->
+                           </ngx-dropzone-image-preview>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+                  <div class="col-md-3 col-lg-3 mx-auto">
+                        <button type="button" ngbTooltip="{{'Submit' | translate}}" (click)="submit()"
+                           class="btn btn-primary mr-2 my-2 mb-md-0 w-100" style="border-radius: 4px;">{{"Submit" | translate}}</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- End Row -->

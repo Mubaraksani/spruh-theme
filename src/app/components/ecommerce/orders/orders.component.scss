@@ -1,0 +1,36 @@
+::ng-deep {
+    .filter-group .ng-select {
+        width: 120px !important;
+        height: 38px;
+    }
+
+    .rtl .form-control {
+        padding: 0rem 0.75rem 0rem 0.25rem;
+    }
+
+    .table-filter input {
+        width: 180px;
+    }
+}
+
+@media (max-width : 340px) {
+    .d-flex.mt-4.mt-lg-0 {
+        flex-wrap: wrap;
+
+        .filter-group {
+            margin-bottom: 10px;
+        }
+
+        .filter-group:nth-child(2) {
+            margin-left: 0rem !important;
+        }
+    }
+
+    .table-filter input {
+        width: 150px !important;
+    }
+}
+
+.table> :not(:first-child) {
+    border-inline: 0 !important;
+}

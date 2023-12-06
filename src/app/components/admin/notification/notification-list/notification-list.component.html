@@ -1,0 +1,206 @@
+<div class="page-header">
+   <div>
+      <h2 class="main-content-title tx-24 mg-b-5">{{'Notifications' | translate | titlecase}}</h2>
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="javascript:;" [routerLink]="['/dashboard']">{{'dashboard' |
+               translate | titlecase}}</a></li>
+         <li class="breadcrumb-item active" aria-current="page">{{'Notifications' | translate | titlecase}}</li>
+      </ol>
+   </div>
+</div>
+
+<div class="row row-sm">
+    <div class="col-md-12 col-lg-12">
+        <div class="card custom-card">
+            <div class="card-body pt-2">
+                <div class="row mb-3" style="align-items: center;">
+                    <div class="col-md-8">
+                        <label class="main-content-label my-auto pt-2" style="font-size: 18px !important; color: #000;" translate>Notifications List</label>
+                    </div>
+                    <div class="col-md-2 mt-2">
+                        <button type="button" ngbTooltip="{{'Mark All As Read' | translate}}" (click)="markAllNotification()"
+                            class="btn btn-secondary mr-2 mb-2 mb-md-0 w-100" style="border-radius: 4px;">
+                            <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 18px !important;"></i>&nbsp;{{"Read All" | translate}}
+                        </button>
+                    </div>
+                    <!-- <div class="col-md-2 mt-2"></div> -->
+                    <div class="col-md-2 mt-2">
+                        <button type="button" (click)="notificationModalOpen(notificationModal)" ngbTooltip="{{'Add Notification' | translate}}"
+                            class="btn btn-primary mr-2 mb-2 mb-md-0 w-100" style="border-radius: 4px;">
+                            <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 18px !important;"></i>&nbsp;{{"Add" | translate}}
+                        </button>
+                    </div>
+                </div>
+                <!-- <div class="row table-filter">
+                    <div class="col-lg-8 col-md-8">
+                        <label>Notification Type</label>
+                        <div class="form-group" style="margin-bottom: 1.4rem;">
+                            <div class="mt-lg-0 align-items-center justify-content-end">
+                                <div class="filter-group">
+                                    <ng-select class="form-control p-0" [(ngModel)]="notificationType"
+                                            placeholder="{{'Select Notification Type' | translate}}" >
+                                        <ng-option disabled value="">
+                                            {{"Select Notification Type" | translate}}
+                                        </ng-option>
+                                        <ng-option [value]="item?.label" *ngFor="let item of notificationTypeArr">{{item?.label}}
+                                        </ng-option>
+                                    </ng-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 mt-2">
+                        <button type="button" (click)="filterAction()" ngbTooltip="{{'Filter' | translate}}"
+                            class="btn btn-primary mr-2 mb-2 mb-md-0 w-100" style="border-radius: 4px;">{{"Filter" | translate}}</button>
+                    </div>
+                    <div class="col-lg-2 col-md-2 mt-2">
+                        <button type="button" (click)="clearAction()" ngbTooltip="{{'Clear' | translate}}"
+                            class="btn btn-secondary mr-2 mb-2 mb-md-0 w-100" style="border-radius: 4px;">{{"Clear" | translate}}</button>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <ng-container >
+                            <div class="card mb-3"  style="border-radius: 25px !important;">
+                                <div class="card-body" style="padding: 16px !important;">
+                                    <div class="row mb-2">
+                                        <div class="col-md-10">
+                                            <p style="font-size: 16px;"><b>{{'Notification Title'}}</b></p> 
+                                        </div>
+                                        <!-- <ng-container *ngIf="item?.is_notification_read === false; else notificationRead"> -->
+                                            <div class="col-md-1">
+                                                <div class="media-icon bg-primary-transparent text-primary" (click)="markSingleNotification('item')" ngbTooltip="{{'Mark As Read' | translate}}" style="cursor: pointer;">
+                                                    <i class="fa fa-check-circle"></i>
+                                                </div>
+                                            </div>
+                                        <!-- </ng-container> -->
+                                        <!-- <ng-template #notificationRead> -->
+                                            <div class="col-md-1">
+                                                <div class="media-icon bg-primary-transparent text-primary" (click)="deleteNotification()"  ngbTooltip="{{'Delete' | translate}}" >
+                                                    <i class="fa fa-trash"></i>
+                                                </div>
+                                            </div>
+                                        <!-- </ng-template> -->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p style="font-size: 14px;">{{'Notification message orem ipsum dolor, sit amet consectetur adipisicing elit. Quas natus nobis enim, aspernatur architecto dolor?'}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 text-end">
+                                            <span style="font-size: 14px;"><b>{{'12/02/2003 12:03' | date:'dd/MM/yy HH:mm'}}</b></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
+                        <ng-template #no_data>
+                            <div class="card mb-3"  style="border-radius: 25px !important;">
+                                <div class="card-body text-center">
+                                    <label>
+                                        <b>
+                                            {{"No data found!" | translate}}
+                                         </b>
+                                    </label>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+                <div class="row table-filter">
+                    <div class="col-lg-4 col-md-4 d-lg-flex">
+                        <div class="show-entries mt-2">
+                            <span translate>Show</span>
+                            <select class="form-control" [(ngModel)]="size" (change)="pageReset()">
+                                <option>5</option>
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                                <option>50</option>
+                            </select>
+                            <span translate>entries</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4"></div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="mt-3">
+                            <ngb-pagination class="d-flex justify-content-end" [collectionSize]="totalSize" [pageSize]="size"
+                                [(page)]="page" aria-label="Custom pagination" (pageChange)="getNotificationList();"
+                                [maxSize]="5" [rotate]="true" [ellipses]="false">
+                                <ng-template ngbPaginationPrevious translate>Prev</ng-template>
+                                <ng-template ngbPaginationNext translate>Next</ng-template>
+                            </ngb-pagination>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<!--Notification modal -->
+<ng-template #notificationModal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title" translate>Add Notification</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form class="form-horizontal" [formGroup]="form">
+        <div class="modal-body">
+            <div class="form-group">
+                <div class="row row-sm align-items-center">
+                    <div class="col-md-12 mg-t-5 mg-md-t-0">
+                        <div class="form-group">
+                            <label translate>User Type</label>
+                            <ng-select class="form-control p-0" formControlName="user_type" [multiple]="true"
+                            placeholder="{{'Select User Type'| translate}}" [(ngModel)]="userType" >
+                                <ng-option disabled value="">
+                                    {{"Select User Type" | translate}}
+                                </ng-option>
+                                <ng-option [value]="item.value" *ngFor="let item of userTypeArr">{{item.label}}
+                                </ng-option>
+                            </ng-select>
+                            <ng-container class="invalid" *ngIf="form.get('user_type')?.hasError('required') && form.get('user_type')?.touched">
+                                <small class="tx-danger" translate>Please Select User Type.</small>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-sm align-items-center">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label translate>Notification Title</label>
+                            <input type="text" formControlName="notification_title" class="form-control"
+                                placeholder="{{'Enter Notification Title' | translate}}"
+                                [ngClass]="{'has-success': form.get('notification_title')?.valid}" />
+                            <ng-container class="invalid"
+                                *ngIf="form.get('notification_title')?.hasError('required') && (form.get('notification_title')?.touched || form.get('notification_title')?.dirty)">
+                                <small class="tx-danger" translate>Please Provide Notification Title</small>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-sm mt-3 align-items-center">
+                    <div class="col-md-12 mg-t-5 mg-md-t-0">
+                        <label translate>Description</label>
+                        <textarea class="form-control" formControlName="notification_message" placeholder="{{'Notification' | translate}}..."
+                            rows="5"></textarea>
+                            <ng-container class="invalid"
+                            *ngIf="form.get('notification_message')?.hasError('required') && form.get('notification_message')?.touched || form.get('campaign_subscription')?.dirty">
+                            <small class="tx-danger" translate>Please Enter Description</small>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn ripple btn-primary" type="button" (click)="addNotification(modal)"
+                translate>Save</button>
+            <button type="button" (click)="modal.close('Close click')" class="btn ripple btn-secondary"
+                style="border-radius: 4px;">{{"Close" | translate}}</button>
+        </div>
+    </form>
+</ng-template>

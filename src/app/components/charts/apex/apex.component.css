@@ -1,0 +1,21 @@
+::ng-deep svg {
+  -webkit-transform: translate(0, 0) !important;
+          transform: translate(0, 0) !important;
+}
+
+::ng-deep svg:nth-last-child(3) {
+  -webkit-transform: translate(30px, 0) !important;
+          transform: translate(30px, 0) !important;
+  overflow: visible !important;
+}
+
+::ng-deep svg:nth-last-child(2) {
+  -webkit-transform: translate(-10px, 0) !important;
+          transform: translate(-10px, 0) !important;
+  overflow: visible !important;
+}
+
+::ng-deep .apexcharts-tooltip, ::ng-deep .apexcharts-toolbar {
+  z-index: 2 !important;
+}
+/*# sourceMappingURL=apex.component.css.map */

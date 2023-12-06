@@ -1,0 +1,80 @@
+::ng-deep .colorHeadSecondary .popover-header {
+  background-color: #f1388b !important;
+  color: #fff;
+}
+
+::ng-deep .fullPrimary.popover, ::ng-deep .fullSecondary.popover {
+  border: none;
+}
+
+::ng-deep .fullPrimary .popover-body, ::ng-deep .fullPrimary .popover-header {
+  background-color: #6259ca;
+  color: #fff;
+  border: none;
+}
+
+::ng-deep .fullSecondary .popover-header, ::ng-deep .fullSecondary .popover-body {
+  background-color: #f1388b !important;
+  color: #fff;
+  border: none;
+}
+
+::ng-deep .fullPrimary.bs-popover-top > .arrow::after {
+  border-top-color: #6259ca;
+}
+
+::ng-deep .fullSecondary.bs-popover-top > .arrow::after {
+  border-top-color: #f1388b;
+}
+
+::ng-deep .popover {
+  z-index: 9 !important;
+}
+
+@media (min-width: 992px) {
+  ::ng-deep .bs-popover-top:nth-last-child(2) {
+    -webkit-transform: translate(-21px, 1px) !important;
+            transform: translate(-21px, 1px) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  ::ng-deep .bs-popover-right:nth-child(2) {
+    -webkit-transform: translate(0px, 30px) !important;
+            transform: translate(0px, 30px) !important;
+  }
+  ::ng-deep .bs-popover-left:nth-child(2) {
+    -webkit-transform: translate(0px, 30px) !important;
+            transform: translate(0px, 30px) !important;
+  }
+  ::ng-deep .bs-popover-top:nth-last-child(2) {
+    -webkit-transform: translate(2px, 0px) !important;
+            transform: translate(2px, 0px) !important;
+  }
+}
+
+@media (max-width: 576px) {
+  ::ng-deep .bs-popover-right:nth-child(2) {
+    -webkit-transform: translate(30px, 30px) !important;
+            transform: translate(30px, 30px) !important;
+  }
+  ::ng-deep .bs-popover-left:nth-child(2) {
+    -webkit-transform: translate(-30px, 30px) !important;
+            transform: translate(-30px, 30px) !important;
+  }
+  ::ng-deep .bs-popover-top:nth-last-child(2) {
+    -webkit-transform: translate(2px, 34px) !important;
+            transform: translate(2px, 34px) !important;
+  }
+  ::ng-deep .colorHeadSecondary.popover.fade.bs-popover-top,
+  ::ng-deep .fullSecondary.popover.fade.bs-popover-top {
+    -webkit-transform: translate(0px, 80px) !important;
+            transform: translate(0px, 80px) !important;
+  }
+}
+
+::ng-deep .popover-header {
+  background-color: #6259ca !important;
+  color: #fff;
+}
+/*# sourceMappingURL=popover.component.css.map */

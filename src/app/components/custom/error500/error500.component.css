@@ -1,0 +1,10 @@
+::ng-deep .construction1.text-center.details {
+  margin-top: 140px;
+}
+
+@media (max-width: 340px) {
+  ::ng-deep .btn.ripple.btn-success.text-center {
+    margin-bottom: 16px;
+  }
+}
+/*# sourceMappingURL=error500.component.css.map */

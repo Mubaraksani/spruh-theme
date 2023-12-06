@@ -1,0 +1,22 @@
+
+@media (max-width: 991.9px) {
+    .sidemenu-logo{
+        display: none;
+    }
+}
+
+.sub-nav-sub.open,
+.nav-sub.open{
+    display: block;
+}
+
+::ng-deep{
+    
+    .horizontalmenu .hor-menu li.nav-item .nav-link{
+        min-width: max-content;
+    }
+
+    .horizontalmenu app-sidemenu perfect-scrollbar{
+        position: static !important;
+    }
+}

@@ -1,0 +1,45 @@
+::ng-deep {
+
+    app-accordion {
+        .btn.btn-link {
+            color: #6259ca;
+            background-color: #e1e1f9;
+        }
+
+        .btn.btn-link.collapsed {
+            color: #3c4858;
+            background-color: #e1e1f9;
+        }
+
+        .btn.btn-link:hover {
+            background-color: #6259ca;
+            color: #fff;
+        }
+    }
+
+    .dark-theme {
+        app-accordion {
+            .btn.btn-link {
+                color: #fff;
+                background-color: #24243e;
+            }
+
+            .btn.btn-link.collapsed {
+                color: #ccc;
+                background-color: #24243e;
+            }
+
+            .btn.btn-link:hover {
+                color: #fdfeff;
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+    }
+
+    .rtl {
+        .accordion .card-header button {
+            text-align: right !important;
+        }
+    }
+
+}

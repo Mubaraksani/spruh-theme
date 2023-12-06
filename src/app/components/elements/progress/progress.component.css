@@ -1,0 +1,8 @@
+::ng-deep .progress.large {
+  height: 15px;
+}
+
+::ng-deep .large .progress-bar {
+  height: 15px;
+}
+/*# sourceMappingURL=progress.component.css.map */

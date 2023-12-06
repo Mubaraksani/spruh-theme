@@ -1,0 +1,227 @@
+<div class="page-header">
+   <div>
+      <h2 class="main-content-title tx-24 mg-b-5">{{'Users' | translate | titlecase}}</h2>
+      <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="javascript:;" [routerLink]="['/dashboard']">{{'dashboard' |
+               translate | titlecase}}</a></li>
+         <li class="breadcrumb-item active" aria-current="page">{{'Notifications' | translate | titlecase}}</li>
+      </ol>
+   </div>
+</div>
+<!-- Row -->
+<div class="row row-sm">
+   <div class="col-md-12 col-lg-12">
+      <div class="card custom-card">
+         <div class="card-header  border-bottom-0 pb-0">
+            <div>
+               <div class="row justify-content-between">
+                  <div class="col-md-2 col-lg-2">
+                     <label class="main-content-label my-auto pt-2">All Users</label>
+                  </div>
+                  <div class="col-md-3 col-lg-3">
+                     <button type="button" (click)="addUsers()" ngbTooltip="{{'Add User' | translate}}"
+                        class="btn btn-primary mr-2 mb-2 mb-md-0 w-100" style="border-radius: 4px;">
+                        <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 18px !important;"></i>&nbsp;{{"Add" | translate}}
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="card-body">
+            <div class="row table-filter">
+               <label>Filter with Api (Backend)</label>
+               <div class="col-lg-3">
+                  <div class="show-entries mt-2">
+                     <span translate>Show</span>
+                     <select class="form-control" > <---- <!-- [(ngModel)]="size" and (change)="pageReset()" will be here-->
+                        <option>5</option>
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>50</option>
+                     </select>
+                     <span translate>entries</span>
+                  </div>
+               </div>
+               <div class="col-lg-9 d-lg-flex justify-content-end">
+                  <div class="d-flex mt-4 me-4 mt-lg-0">
+                     <div class="filter-group">
+                        <input type="text" class="form-control" placeholder="search"> <!--[(ngModel)]="search" will be here-->
+                     </div>
+                     <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button> <!-- (click)="filter()" will be here-->
+                  </div>
+                  <div class="d-md-flex d-block mt-4 mt-lg-0">
+                     <div class="filter-group d-flex align-items-center mb-4 mb-md-0">
+                        <label>Location</label>
+                        <span class="d-inline-block ms-1">
+                           <ng-select class="form-control w-100" placeholder="Select">
+                              <ng-option>Berlin</ng-option>
+                              <ng-option>London</ng-option>
+                              <ng-option>Madrid</ng-option>
+                              <ng-option>New York</ng-option>
+                              <ng-option>Paris</ng-option>
+                           </ng-select>
+                        </span>
+                     </div>
+                     <div class="filter-group ms-3 d-flex align-items-center">
+                        <label>Status</label>
+                        <span class="d-inline-block ms-1">
+                           <ng-select class="form-control" placeholder="Select">
+                              <ng-option>Delivered</ng-option>
+                              <ng-option>Shipped</ng-option>
+                              <ng-option>Pending</ng-option>
+                              <ng-option>Cancelled</ng-option>
+                           </ng-select>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-8 col-lg-8"></div>
+            <div class="col-md-2 col-lg-2">
+               <button type="button" ngbTooltip="{{'Filter' | translate}}" class="btn btn-secondary mr-2 mb-2 mb-md-0 w-100"
+                  style="border-radius: 4px;" (click)="filter()">
+                  {{"Filter" |translate}}
+               </button>
+            </div>
+            <div class="col-md-2 col-lg-2">
+               <button type="button" ngbTooltip="{{'Clear' | translate}}" class="btn btn-primary mr-2 mb-2 mb-md-0 w-100"
+                  style="border-radius: 4px;" (click)="clearAction()">
+                  {{"Clear" |translate}}
+               </button>
+            </div>
+            </div>
+            <hr>
+            <div class="row table-filter">
+               <label>Filter with Angular (Frontend)</label>
+               <div class="col-lg-3">
+                  <div class="show-entries mt-2">
+                     <span translate>Show</span>
+                     <select class="form-control" [(ngModel)]="size" (change)="pageReset()">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>50</option>
+                     </select>
+                     <span translate>entries</span>
+                  </div>
+               </div>
+               <div class="col-lg-9 d-lg-flex justify-content-end">
+                  <div class="d-flex mt-4 me-4 mt-lg-0">
+                     <div class="filter-group">
+                        <input type="text" class="form-control" placeholder="search" [(ngModel)]="search">
+                     </div>
+                     <button type="button" class="btn btn-primary" (click)="filter()"><i class="fa fa-search"></i></button>
+                  </div>
+                  <div class="d-md-flex d-block mt-4 mt-lg-0">
+                     <div class="filter-group d-flex align-items-center mb-4 mb-md-0">
+                        <label>Location</label>
+                        <span class="d-inline-block ms-1">
+                           <ng-select class="form-control w-100" placeholder="Select" [(ngModel)]="location" >
+                              <ng-option *ngFor="let location of locations" value="{{location}}">{{location}}</ng-option>
+                           </ng-select>
+                        </span>
+                     </div>
+                     <div class="filter-group ms-3 d-flex align-items-center">
+                        <label>Status</label>
+                        <span class="d-inline-block ms-1">
+                           <ng-select class="form-control" placeholder="Select"  [(ngModel)]="status" >
+                              <ng-option value="active">Active</ng-option>
+                              <ng-option value="inactive">Inacive</ng-option>
+                           </ng-select>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-8 col-lg-8"></div>
+               <div class="col-md-2 col-lg-2">
+                  <button type="button"  ngbTooltip="{{'Filter' | translate}}" class="btn btn-secondary mr-2 mb-2 mb-md-0 w-100"
+                     style="border-radius: 4px;" (click)="filter()">
+                     {{"Filter" |translate}}
+                  </button>
+               </div>
+               <div class="col-md-2 col-lg-2">
+                  <button type="button" ngbTooltip="{{'Clear' | translate}}" class="btn btn-primary mr-2 mb-2 mb-md-0 w-100"
+                     style="border-radius: 4px;" (click)="clearAction()">
+                     {{"Clear" |translate}}
+                  </button>
+               </div>
+            </div>
+            <div class="table-responsive border mt-5">
+               <table class="table mb-0 text-nowrap text-md-nowrap">
+                  <thead>
+                     <tr>
+                        <th class="text-center">#</th>
+                        <th class="text-center">profile</th>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Joining Date</th>
+                        <th class="text-center">CTC</th>
+                        <th class="text-center">Company</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Actions</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <ng-container *ngIf="displayOrders.length !=0 else no_data">
+                        <tr class="border-bottom" *ngFor="let order of displayOrders; let i = index">
+                           <td>{{(page - 1) * size + i + 1}}</td>
+                           <td>
+                              <img alt="avatar" class="rounded-circle avatar-md me-2" src="./assets/img/users/11--.jpg" #img
+                              (error)="img.src='./assets/img/users/blank_profile.png'">
+                           </td>
+                           <th scope="row">{{order.id}}</th>
+                           <td>{{order.name}}</td>
+                           <td>{{order.date}}</td>
+                           <td>{{order.total | currency}}</td>
+                           <td>{{order.warehouse}}</td>
+                           <td>
+                              <label class="custom-switch" [ngbTooltip]="order.status == true ? 'Active': 'Inactive'">
+                                 <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" id="{{order.invoice}}"
+                                    [checked]="order.status == true ? true : false" (click)="activeInactive(i, order, $event)">
+                                 <label for="{{order.invoice}}" class="custom-switch-indicator"></label>
+                              </label>
+                              <!-- <span class="status {{order.statusbg}}"></span>
+                              {{order.status}} -->
+                           </td>
+                           <td>
+                              <div class="button-list">
+                                 <!-- <a ngbTooltip="Copy" href="javascript:;" class="btn"><i class="ti ti-files"></i></a> -->
+                                 <a ngbTooltip="Edit" routerLink="/users/edit-user" class="btn"><i class="ti ti-pencil"></i></a>
+                                 <a (click)="deleteAction(order.id)" ngbTooltip="Delete"
+                                    href="javascript:;" class="btn"><i class="ti ti-trash"></i></a>
+                              </div>
+                           </td>
+                        </tr>
+                     </ng-container>
+                     <ng-template #no_data>
+                        <tr >
+                           <td class="text-center fw-bold" colspan="12">
+                                 {{"No data found!" | translate}}
+                           </td>
+                        </tr>
+                     </ng-template>
+                  </tbody>
+               </table>
+            </div>
+            <div class="row">
+               <div class="col-md-8"></div>
+               <div class="col-md-4">
+                  <div class="mt-3">
+                     <ngb-pagination class="d-flex justify-content-end" [collectionSize]="totalSize" [(page)]="page"
+                        aria-label="Custom pagination" [pageSize]="size" (pageChange)="getOrdersList()">
+                        <ng-template ngbPaginationPrevious>Prev</ng-template>
+                        <ng-template ngbPaginationNext>Next</ng-template>
+                     </ngb-pagination>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- End Row -->
